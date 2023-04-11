@@ -3,11 +3,20 @@ import { format } from 'date-fns/esm';
 import { MdDelete, MdEdit } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
+import { motion } from 'framer-motion';
 import CheckButton from './CheckButton';
 import TodoModal from './TodoModal';
 import styles from '../styles/modules/todoItem.module.scss';
 import { getClasses } from '../utils/getClasses';
-import { deleteTodo } from '../slices/todoSlice';
+import { deleteTodo, updateTodo } from '../slices/todoSlice';
+
+const child = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 function TodoComp({ todo }) {
   const dispatch = useDispatch();
@@ -26,14 +35,26 @@ function TodoComp({ todo }) {
     dispatch(deleteTodo(todo.id));
     toast.success('Task was Deleted Successfully');
   };
+
   const handleUpdate = () => {
     setUpdateModalOpen(true);
   };
+
+  const handleCheck = () => {
+    setChecked(!checked);
+    dispatch(
+      updateTodo({
+        ...todo,
+        status: checked ? 'incomplete' : 'complete',
+      })
+    );
+  };
+
   return (
     <>
-      <div className={styles.item}>
+      <motion.div className={styles.item} variants={child}>
         <div className={styles.todoDetails}>
-          <CheckButton checked={checked} setChecked={setChecked} />
+          <CheckButton checked={checked} handleCheck={handleCheck} />
           <div className={styles.text}>
             <p
               className={getClasses([
@@ -68,7 +89,7 @@ function TodoComp({ todo }) {
             <MdEdit />
           </div>
         </div>
-      </div>
+      </motion.div>
       <TodoModal
         type="update"
         todo={todo}
