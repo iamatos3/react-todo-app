@@ -1,6 +1,6 @@
-![Ian's React To-Do App](./banner.png)
-
 # Ian's React To-do App
+
+![Ian's React To-Do App](./banner.png)
 
 ## Project Description
 
