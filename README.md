@@ -1,38 +1,32 @@
-# React Todo App.
+![Ian's React To-Do App](./banner.png)
 
-SVG for CheckBox: [mentioned in the video]
+# Ian's React To-do App
 
-```html
-<svg viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path
-		fill="none"
-		strokeMiterlimit="10"
-		strokeWidth="6"
-		d="M1.5 22L16 36.5L51.5 1"
-		strokeLinejoin="round"
-		strokeLinecap="round"
-	></path>
-</svg>
-```
+## Project Description
 
-## Starter files
+In this project, I created a Complete To-Do Application with all features and using CRUD operations. `React.js` was used to manage our states along with `Redux`. Also learned to make simple animations using `Framer Motion`.
 
-You can find all the starter files in `starter-files` branch. You can to go to the `starter-files` branch and `download zip` the the starter files or You can clone the project and git checkout to `starter-files` branch.
+## Important Links
 
-## Getting Started
+-
 
-The recommended way to get started with the project is Follow the `YouTube tutorial`. You will find all the step-by-step guides. Or you Can start the project on your own by following the guide below.
+### Setup Steps
 
-After getting the starter files, you need to go the file directory and run
+1. [Fork and Clone](https://github.com/iamatos3/react-todo-app) this repository.
+2. ```npm install```
+3. ```npm start```
 
-```shell
-npm install
-```
+### Technologies Used
 
-and after that start the dev server.
+- [React](https://reactjs.org/)
+- [React Redux](https://redux.js.org/)
+- [Framer Motion](https://framer.com/motion/)
+- [React icons](https://react-icons.netlify.com/)
+- [React Hot Toast](https://react-hot-toast.com/)
+- [Flaticon.com](https://www.flaticon.com/)
+- [VS Code](https://code.visualstudio.com/)
 
-```shell
-npm start
-```
+### Requirements
 
-Happy Coding! 🚀
+- Basic React.js knowledge
+- Basic HTML & CSS knowledge
