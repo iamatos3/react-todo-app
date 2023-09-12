@@ -1,6 +1,6 @@
 # Ian's React To-do App
 
-![Ian's React To-Do App](./banner.png)
+![Ian's React To-Do App](https://github.com/iamatos3/react-todo-app/assets/88846920/131cefe6-8b4d-4a31-a446-0a8a70cf800d)
 
 ## Project Description
 
